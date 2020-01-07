@@ -219,21 +219,6 @@ end
 
 def winning_team
   total = 0
-  team_totals = {}
-
-  game_hash.each do |home_away, team_info|
-    team_info[:players].each do |player|
-      total += player[:points]
-    end
-    team = team_info[:team_name]
-    team_total[team] = total
-  end
-  
-  highest_scorer
-end
-
-def winning_team
-  total = 0
   winning_team = ''
   winning_team_total = 0
   team_totals = {}
